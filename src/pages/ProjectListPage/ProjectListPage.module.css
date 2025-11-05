@@ -1,0 +1,117 @@
+.container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-base);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stickyHeader {
+  flex-shrink: 0;
+  background-color: var(--bg-secondary);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.03rem;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+.listContainer {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-right: var(--spacing-xs);
+  min-height: 0;
+}
+
+.listContainer::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.listContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: var(--radius-sm);
+}
+
+.listContainer::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0;
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.error {
+  color: red;
+}
+
+.empty {
+  color: var(--text-secondary);
+  margin-top: var(--spacing-3xl);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+
+  .stickyHeader {
+    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .listContainer {
+    gap: var(--spacing-md);
+    padding-right: var(--spacing-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--spacing-4xl) var(--spacing-3xl);
+  }
+
+  .listContainer {
+    padding-right: var(--spacing-sm);
+  }
+}

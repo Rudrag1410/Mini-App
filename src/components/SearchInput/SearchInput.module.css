@@ -1,0 +1,31 @@
+.container {
+  flex-shrink: 0;
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-base);
+  font-size: var(--font-size-base);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-base);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.input::placeholder {
+  color: var(--text-tertiary);
+}
+
+@media (min-width: 768px) {
+  .input {
+    padding: var(--spacing-base) var(--spacing-lg);
+    font-size: var(--font-size-md);
+  }
+}
